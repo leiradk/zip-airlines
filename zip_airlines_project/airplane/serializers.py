@@ -33,6 +33,6 @@ class AirplaneSeriallizer(serializers.ModelSerializer):
         # add airplane fuel consumption and passenger consumption then multiply to get the total airplane fuel consumption
         airplane_consumption = instance.airplane_id * (0.80 + passenger_consumption) 
 
-        travel_time = (fuel_tank_capacity/airplane_consumption) * 60
+        maximum_minutes = (fuel_tank_capacity/airplane_consumption) * 60
 
-        return str(travel_time) + ' minutes'
+        return str(maximum_minutes) + ' minutes'
